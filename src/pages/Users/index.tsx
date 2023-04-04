@@ -31,7 +31,7 @@ const [usuarios, setUsuarios] = useState<Usuarioss[]>([]);
     const update_page = async(id: number) => {
         // dispatch({ type: 'DELETE_USER', payload: id });
         let json = await allApi.getUser(id)
-        console.log('upd '+JSON.stringify(json.author));
+        // console.log('upd '+JSON.stringify(json.author));
 
             localStorage.setItem("id",json.id);
             localStorage.setItem("author",json.author);
@@ -49,7 +49,7 @@ const [usuarios, setUsuarios] = useState<Usuarioss[]>([]);
 
         
 
-        console.log('staorage + '+ localStorage.getItem('author') )
+        // console.log('staorage + '+ localStorage.getItem('author') )
 
        dispatch({
              type: 'UPDATE_PAGE',
@@ -109,7 +109,7 @@ const [usuarios, setUsuarios] = useState<Usuarioss[]>([]);
             }) 
 
         let usuarios= await listUsers();
-        console.log('vim ' + usuarios);
+        // console.log('vim ' + usuarios);
         
         } catch (error) {
           console.error(error);
@@ -127,7 +127,7 @@ const [usuarios, setUsuarios] = useState<Usuarioss[]>([]);
     useEffect(() => {
         setTimeout(()=>{
             allApi.loadUsers1(dispatch);
-            console.log('nada? ')
+            // console.log('nada? ')
             // allApi.loadUsers1(dispatch);
         },1000)
        
@@ -145,7 +145,7 @@ const [usuarios, setUsuarios] = useState<Usuarioss[]>([]);
 
 
     const handleChange = async (author: string, txt: string, id?:number) => {
-        console.log('tenho iss ' + author + 'txt ' + author)
+        // console.log('tenho iss ' + author + 'txt ' + author)
         await allApi.addConto(author, txt);
         dispatch({
             type: "ADD_USER",

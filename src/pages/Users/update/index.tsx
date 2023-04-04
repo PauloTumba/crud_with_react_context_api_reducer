@@ -13,7 +13,7 @@ export type Usuarioss = {
 }
 export const UpdateUser = () => {
 
-    console.log('estou no update')
+    // console.log('estou no update')
 const { state, dispatch } = useContext(UserContext);
 let users=state.users[0];
 const [usuarios, setUsuarios] = useState<Usuarioss[]>([]);
@@ -32,7 +32,7 @@ const navigate = useNavigate();
     
 
     const handleChange = async (author: string, txt: string, id:number=0) => {
-        console.log('tenho iss ' + author + 'txt ' + author)
+        // console.log('tenho iss ' + author + 'txt ' + author)
         await allApi.updateUser(author, txt, id);
         dispatch({
             type: "UPDATE",

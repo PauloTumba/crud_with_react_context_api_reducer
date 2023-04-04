@@ -28,7 +28,7 @@ export const userReducer = (state: State, action: Action) => {
     return { ...state, users: [...state.users, action.payload] };
 
     case 'UPDATE_PAGE':
-      console.log('uodate page '+ JSON.stringify(action.payload))
+      // console.log('uodate page '+ JSON.stringify(action.payload))
     return { ...state, users: [...state.users, action.payload] };
 
     case 'DELETE_USER':

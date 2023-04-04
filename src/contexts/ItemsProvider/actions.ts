@@ -50,7 +50,7 @@ loadUsers1:async(dispatch?:any)=>{
  deleteConto:async (id:number) => {       
     let res=await axios.delete(`${BASE}/phrases/${id}`);  
 
-    console.log('return '+res.data.resp)
+    // console.log('return '+res.data.resp)
     return res.data.resp;
 },
 
@@ -71,13 +71,13 @@ deleteUser:async (id:number, dispatch?:any ) => {
 
 getUser:async (id:number, dispatch?:any ) => {       
     let users= await axios.get(`${BASE}/phrases/${id}`);     
-     console.log('return get '+ JSON.stringify(users.data.phrase))
+    //  console.log('return get '+ JSON.stringify(users.data.phrase))
      return users.data.phrase;
    
  },
 
  updateUser:async (author: string, txt: string, id:number) => {   
-    console.log('chuegueis mesmo '+author)
+    // console.log('chuegueis mesmo '+author)
     const headers= { 
         'Content-Type': 'application/x-www-form-urlencoded'
     }
@@ -87,7 +87,7 @@ getUser:async (id:number, dispatch?:any ) => {
             author, txt
         },{ headers });
 
-        console.log('depois do add '+res)
+        // console.log('depois do add '+res)
         return res.data
     }    
 
@@ -95,7 +95,7 @@ getUser:async (id:number, dispatch?:any ) => {
 },
 
  addConto:async (author: string, txt: string) => {   
-    console.log('chueguei mesmo '+author)
+    // console.log('chueguei mesmo '+author)
     const headers= { 
         'Content-Type': 'application/x-www-form-urlencoded'
     }
@@ -105,7 +105,7 @@ getUser:async (id:number, dispatch?:any ) => {
             author, txt
         },{ headers });
 
-        console.log('depois do add '+res)
+        // console.log('depois do add '+res)
         return res.data
     }    
 
@@ -113,7 +113,7 @@ getUser:async (id:number, dispatch?:any ) => {
 }
 ,
 addUser:async (author?: string, txt?: string) => {   
-    console.log('chueguei mesmo '+author)
+    // console.log('chueguei mesmo '+author)
     const headers= { 
         'Content-Type': 'application/x-www-form-urlencoded'
     }
@@ -123,7 +123,7 @@ addUser:async (author?: string, txt?: string) => {
             author, txt
         },{ headers });
 
-        console.log('depois do add '+res)
+        // console.log('depois do add '+res)
         return res.data
     }    
 
